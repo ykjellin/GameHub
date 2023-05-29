@@ -1,1 +1,27 @@
-font-family: 'Oswald', sans-serif;
+@font-face {
+    font-family: 'Oswald', sans-serif;
+}
+header {
+    height: 115px;
+    background-color: #BAC5CF;
+}
+
+main {
+    background-color: #1C213E;
+}
+.logo {
+    width: 150px;
+}
+.productcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+
+    text-align: center;
+    font-family: 'Oswald', sans-serif;;
+}
+main {
+    color: #BAC5CF;
+}
+.product-image {
+    width: 200px;
+}
