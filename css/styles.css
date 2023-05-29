@@ -1,12 +1,15 @@
 @font-face {
     font-family: 'Oswald', sans-serif;
 }
+* {
+    margin:0, padding 0
+}
 header {
     height: 115px;
     background-color: #BAC5CF;
 }
 
-main {
+body {
     background-color: #1C213E;
 }
 .logo {
@@ -15,9 +18,12 @@ main {
 .productcard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 200px;
-
+    height: 450px;
     text-align: center;
+    margin: 20px;
     font-family: 'Oswald', sans-serif;;
+    float: right;
+    background-color: #1C213E;
 }
 main {
     color: #BAC5CF;
@@ -25,3 +31,7 @@ main {
 .product-image {
     width: 200px;
 }
+nav {
+    color: #1C213E;
+}
+
