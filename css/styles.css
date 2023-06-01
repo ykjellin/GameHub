@@ -35,16 +35,11 @@ nav {
     color: #1C213E;
 }
 .cta {
-    display: inline-block;
     background-color: #BAC5CF;
     padding: 20px;
     width: 200px;
     color: #1C213E;
     text-align: center;
     font-size: 28px;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-top: 50%;
-    margin-bottom: 50%;
 }
 
