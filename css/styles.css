@@ -41,5 +41,8 @@ nav {
     color: #1C213E;
     text-align: center;
     font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    margin: 500px;
 }
 
