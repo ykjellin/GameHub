@@ -4,9 +4,25 @@
 * {
     margin:0, padding 0
 }
+
+
 header {
     height: 115px;
     background-color: #BAC5CF;
+    display: flex;
+    align-items: center;
+}
+nav li {
+    float: left;
+    display: inline-flex;
+    text-align: center;
+    padding: 45px;
+}
+a {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: #1C213E;
+    font-size: 36px;
 }
 
 body {
@@ -36,13 +52,23 @@ nav {
 }
 .cta {
     background-color: #BAC5CF;
-    padding: 20px;
-    width: 200px;
+    padding: 10px;
+    width: 400px;
     color: #1C213E;
     text-align: center;
-    font-size: 28px;
+    font-size: 36px;
     display: flex;
-    flex-direction: column;
-    margin: 500px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.indexmain {
+
+}
+
 
