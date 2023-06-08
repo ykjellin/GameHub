@@ -32,7 +32,6 @@ body {
     background-color: #1C213E;
 }
 .logo {
-    flex: 1;
     align-items: center;
 }
 img {
