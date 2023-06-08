@@ -7,16 +7,18 @@
 
 
 header {
-    height: 115px;
+    height: 180px;
     background-color: #BAC5CF;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 nav li {
     float: left;
     display: inline-flex;
     text-align: center;
     padding: 45px;
+    flex: 9;
 }
 a {
     font-family: 'Oswald', sans-serif;
@@ -29,7 +31,9 @@ body {
     background-color: #1C213E;
 }
 .logo {
-    width: 150px;
+    flex: 1;
+    width: 1px;
+    height: auto;
 }
 .productcard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
