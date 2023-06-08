@@ -19,7 +19,7 @@ nav li {
     display: inline-flex;
     text-align: center;
     padding: 45px;
-    flex: 9;
+    flex: 4;
 }
 a {
     font-family: 'Oswald', sans-serif;
