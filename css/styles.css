@@ -13,7 +13,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
 }
 nav li {
     float: left;
@@ -46,10 +45,15 @@ img {
     max-width: 200px;
     height: 450px;
     text-align: center;
-    margin: 20px;
+    margin: 5%;
     font-family: 'Oswald', sans-serif;;
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #1C213E;
+}
+.containercards {
+    display: flex;
+    flex-wrap: wrap;
 }
 main {
     color: #BAC5CF;
