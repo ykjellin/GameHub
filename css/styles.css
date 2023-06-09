@@ -5,14 +5,23 @@
     margin: 0;
     padding: 0;
 }
-
-
 header {
     height: 180px;
     background-color: #BAC5CF;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+body {
+    background-color: #1C213E;
+;
+}
+main {
+    color: #BAC5CF;
+    margin-top: ;
+}
+
+.container {
 }
 nav li {
     float: left;
@@ -25,10 +34,6 @@ a {
     text-decoration: none;
     color: #1C213E;
     font-size: 36px;
-}
-
-body {
-    background-color: #1C213E;
 }
 .logo {
     align-items: center;
@@ -43,21 +48,17 @@ img {
 .productcard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 200px;
-    height: 450px;
+    height: 400px;
     text-align: center;
     margin: 5%;
     font-family: 'Oswald', sans-serif;;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #1C213E;
 }
 .containercards {
     display: flex;
     flex-wrap: wrap;
 }
-main {
-    color: #BAC5CF;
-}
+
 .product-image {
     width: 200px;
 }
