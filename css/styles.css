@@ -1,43 +1,64 @@
 @font-face {
     font-family: 'Oswald', sans-serif;
 }
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-header {
-    height: 180px;
-    background-color: #BAC5CF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 body {
-    background-color: #1C213E;
-;
-}
-main {
-    color: #BAC5CF;
-    margin-top: ;
+    font-family: 'Oswald', 'Verdana, sans-serif';
+    background-color: #1c213e;
 }
 
-.container {
+header {
+    display: flex;
+    background-color: #bac5cf;
+    height: 100px;
 }
-nav li {
-    float: left;
-    display: inline-flex;
-    text-align: center;
-    padding: 45px;
+
+nav {
+    width: 100%;
 }
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100px;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    width: calc(80%/4);
+}
+
 a {
-    font-family: 'Oswald', sans-serif;
     text-decoration: none;
     color: #1C213E;
-    font-size: 36px;
+    font-size: xx-large;
 }
-.logo {
-    align-items: center;
-    justify-content: left;
+
+
+
+main {
+    color: #bac5cf;
+}
+h2 {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.containercards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 img {
     object-fit: scale-down;
@@ -46,41 +67,48 @@ img {
 }
 
 .productcard {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    
+    border-color: #bac5cf;
     max-width: 200px;
     height: 400px;
-    text-align: center;
     margin: 5%;
+    text-align: left;
     font-family: 'Oswald', sans-serif;;
     background-color: #1C213E;
 }
-.containercards {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.product-image {
-    width: 200px;
+.price {
+    font-size: larger;
+    position: absolute;
+    border: 3px;
+    border-style: solid;
+    transform: translate(49px, 50px);
+
 }
-nav {
+.console {
+    font-size: small;
+    font-weight: 300;
+    transform: translateY(5px);
+}
+.cartstore {
     color: #1C213E;
-}
-.cta {
-    background-color: #BAC5CF;
-    padding: 10px;
-    width: 400px;
-    color: #1C213E;
-    text-align: center;
-    font-size: 36px;
-    white-space: nowrap;
-}
-.flexbox{
+    font-size: larger;
+    font-weight: 500;
+    position: absolute;
+    transform: translate(106px, 50px);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    background-color: #bac5cf;
+    width: 8%;
+    height: 2.8%;
+    text-align: justify;
+    displ
+    
 }
-.indexmain {
+
+@media (max-width: 600px) {
 
 }
-
-
