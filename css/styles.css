@@ -113,8 +113,8 @@ footer {
     width: 100%;
     color: #bac5cf;
     justify-content: center;
-    margin: 5%;
     border-top: 1px solid;
+    padding-bottom: 5%;
 }
 
 @media (max-width: 600px) {
