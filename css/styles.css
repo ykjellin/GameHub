@@ -106,8 +106,15 @@ img {
     width: 88px;
     height: 35px;
     text-align: justify;
-    displ
     
+}
+footer {
+    display: flex;
+    width: 100%;
+    color: #bac5cf;
+    justify-content: center;
+    margin: 5%;
+    border-top: 1px solid;
 }
 
 @media (max-width: 600px) {
