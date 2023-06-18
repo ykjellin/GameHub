@@ -84,12 +84,13 @@ img {
     position: absolute;
     border: 3px;
     border-style: solid;
-    transform: translate(50px, 50px);
+    transform: translate(50px, 15px);
 
 }
 .console {
     font-size: small;
     font-weight: 300;
+    margin: 4%;
     transform: translateY(5px);
 }
 .cartstore {
@@ -97,7 +98,7 @@ img {
     font-size: larger;
     font-weight: 500;
     position: absolute;
-    transform: translate(106px, 50px);
+    transform: translate(106px, 15px);
     display: flex;
     flex-direction: column;
     justify-content: center;
