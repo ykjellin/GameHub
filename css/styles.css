@@ -13,6 +13,8 @@ body {
     background-color: #1c213e;
 }
 
+/* top bar */
+
 header {
     display: flex;
     background-color: #bac5cf;
@@ -45,7 +47,7 @@ a {
     font-size: xx-large;
 }
 
-
+/* store page */
 
 main {
     color: #bac5cf;
@@ -112,6 +114,21 @@ img {
     text-align: justify;
     
 }
+
+/* index page */
+
+.indexmain {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.cta {
+    background-color: #bac5cf;
+
+}
+
 footer {
     display: flex;
     width: 100%;
