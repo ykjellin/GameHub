@@ -123,11 +123,11 @@ img {
     justify-content: center;
     margin: auto;
     height: 80%;
-    align-items: center;
 }
 
 .cta {
     background-color: #bac5cf;
+
 
 }
 
@@ -155,6 +155,8 @@ img {
     margin: 0.5%;
     font-weight: 400;
 }
+
+/* checkout */
 
 footer {
     display: flex;
