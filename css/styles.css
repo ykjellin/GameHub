@@ -177,14 +177,31 @@ img {
     height: 100%;
     max-width: 100%;
     min-width: 80%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    ". carth2 ."
+    "img carth3 price"
+   ". . .";
+
 }
 
 .price {
     border: #bac5cf;
+    grid-area: price;
 }
 
 .prodimg {
-    width: 40%;
+    width: 25%;
+    grid-area: img;
+}
+
+.carth2 {
+    grid-area: carth2;
+}
+
+.carth3 {
+    grid-area: carth3;
 }
 
 .paymentoptions {
