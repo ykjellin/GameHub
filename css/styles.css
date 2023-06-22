@@ -158,6 +158,47 @@ img {
 
 /* checkout */
 
+.checkoutcontainer {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    'cart paymentoptions form';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 2fr;
+}
+
+.cart {
+    grid-area: cart;
+    color: #1C213E;
+    background-color: #bac5cf;
+}
+
+.price {
+    border: #bac5cf;
+}
+
+.paymentoptions {
+    grid-area: paymentoptions;
+    background-color: #bac5cf;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: '. ms . vs .';
+}
+
+.mastercard {
+    grid-area: ms;
+
+}
+
+.visa {
+    grid-area: vs;
+}
+
+.form {
+    grid-area: form;
+}
+
 footer {
     display: flex;
     width: 100%;
