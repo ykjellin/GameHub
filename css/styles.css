@@ -12,11 +12,14 @@ body {
     font-family: 'Oswald', 'Verdana, sans-serif';
     background-color: #1c213e;
     height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
 }
 
 /* top bar */
 
 header {
+    grid-row: 1;
     display: flex;
     background-color: #bac5cf;
     height: 100px;
@@ -51,6 +54,7 @@ a {
 /* store page */
 
 main {
+    grid-row: 2 span 8;
     color: #bac5cf;
 }
 h2 {
@@ -365,14 +369,22 @@ img {
 
 
 footer {
+    grid-row: 3;
     display: flex;
     width: 100%;
     color: #bac5cf;
     justify-content: center;
     border-top: 1px solid;
     padding-bottom: 5%;
+    align-items: end;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
+}
+
+@media(max-width:500px) {
+    .nav {
+        flex-direction: column;
+    }
 }
