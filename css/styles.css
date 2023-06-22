@@ -165,29 +165,45 @@ img {
     'cart paymentoptions form';
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 1fr 2fr;
+    grid-gap: 10;
 }
 
 .cart {
     grid-area: cart;
     color: #1C213E;
     background-color: #bac5cf;
+    display: grid;
+    margin: 10%;
 }
 
 .price {
     border: #bac5cf;
 }
 
+.prodimg {
+    width: 40%;
+}
+
 .paymentoptions {
     grid-area: paymentoptions;
     background-color: #bac5cf;
-    height: 20vh;
+    color: #1C213E;
+    height: 15vh;
+    width: 70%;
+    margin: 5%;
+    margin-top: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: '. ms . vs .';
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    '. title title title .'
+    '. ms . vs .';
+
 }
 
 .mastercard {
     grid-area: ms;
+    transform: translateY(-12%);
 
 }
 
@@ -195,9 +211,88 @@ img {
     grid-area: vs;
 }
 
-.form {
-    grid-area: form;
+.paytitle {
+    grid-area: title;
+    text-align: center;
 }
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+    flex-flow: column;
+}
+.bginput {
+    width: 200%;
+}
+
+.sminput {
+    width: 90%;
+}
+.cvv{
+
+    /*transform: translateX(200%);*/
+}
+
+.exp {
+
+}
+
+/*.form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 0.1fr);
+    grid-template-areas: 
+    'em em'
+    'ac .'
+    'nm nm'
+    'cn cn'
+    'exp cvv';
+}
+
+.email {
+    grid-area: em;
+}
+
+.addcard {
+    grid-area: ac;
+}
+
+.name {
+    grid-area: nm;
+}
+
+.cn {
+    grid-area: cn;
+}
+
+.exp {
+    grid-area: exp;
+    
+}
+
+.cvv {
+    grid-area: cvv;
+    
+    box-sizing: border-box;
+}
+
+.bginput {
+    width: calc(100% / 2);
+
+}
+
+.sminput {
+    width: calc(100% / 4 );
+}
+
+.details {
+    width: 100%;
+}*/
+
+
+
 
 footer {
     display: flex;
