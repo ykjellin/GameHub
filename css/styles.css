@@ -8,11 +8,11 @@
 
 body {
     background-color: #1c213e;
-    color: #ffffff;
+    color: #bac5cf;
     display: grid;
     font-family: 'Oswald', 'Verdana, sans-serif';
     grid-template-rows: 1fr 8fr 1fr;
-    height: 100%;
+    height: auto;
 }
 
 
@@ -63,7 +63,7 @@ main {
     color: #bac5cf;
 }
 h2 {
-    color: #ffffff;
+    color: #bac5cf;
     font-size: larger;
     font-weight: 500;
 }
@@ -164,9 +164,9 @@ img {
     padding-bottom: 10%;
 }
 
-.aboutcontainer h1, p {
+.aboutcontainer h1 p {
     text-align: center;
-    color: #ffffff;
+
 }
 
 .aboutcontainer h1 {
@@ -564,23 +564,19 @@ footer p {
     }
 
     .checkoutcontainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
-
-    .cart {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    .paymentoptions {
-        grid-row: 2;
-        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 
     .form {
-        grid-row: 3;
-        grid-column: 1;
+        transform: translate(0px);
+        margin-left: 18%;
+    }
+
+    .pay {
+        padding-left: 20%;
+        padding-right: 20%;
     }
 
     .indexmain {
@@ -600,12 +596,12 @@ footer p {
 
     .pongprice {
         width: 35%;
-        transform: translateX(0px);
+        transform: translateX(-5px);
     }
 
     .pongbuy {
         width: 65%;
-        transform: translate(95px, -60px);
+        transform: translate(100px, -60px);
     }
 
     .completecontainer {
@@ -623,49 +619,23 @@ footer p {
         height: auto;
     }
 
-    /*.pongcontainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-    }
-
-    .pongcontainer img {
-        grid-column: 1;
-        grid-row: 1;
-        width: 70%;
-    }
-    
-    .pongcontainer h1 {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .pongtext {
-        grid-column: 1;
-        grid-row: 3;
-        max-width: 60%;
-    }
-
-    .pongbuy {
-        grid-column: 1;
-        grid-row: 4;
-    }
-
-    .pongprice {
-        grid-column: 1;
-        grid-row: 4;
-    }*/
-
     footer {
         flex-direction: column;
     } 
     .footer-info p {
         margin-right: 20%;
+        align-self: center;
+        text-align: center;
     }
     
     .footer-newsletter {
         margin-left: 25%;
     
     } 
+
+    .footer-gamehub {
+        align-self: center;
+    }
 
     .contact-container {
         transform: translateX(-35px);
