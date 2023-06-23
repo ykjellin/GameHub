@@ -177,7 +177,7 @@ img {
 .aboutcontainer p {
     width: 60%;
     margin: 0.5%;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 
@@ -246,6 +246,7 @@ img {
     font-weight: 500;
 }
 
+
 .cart {
     grid-area: cart;
     color: #1C213E;
@@ -302,6 +303,7 @@ img {
 }
 
 .total {
+    color: #1C213E;
     font-weight: 600;
     grid-column: 2;
     grid-row: 5;
@@ -310,6 +312,7 @@ img {
 }
 
 .totalprice {
+    color: #1C213E;
     font-weight: 600;
     grid-column: 3;
     grid-row: 5;
@@ -468,7 +471,7 @@ img {
     grid-column: 2 / 4;
     grid-row: 2;
     margin: 5%;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .pongbuy {
@@ -500,14 +503,18 @@ img {
 }
 
 footer {
+    color: #bac5cf;
     grid-row: 3;
     display: flex;
     width: 100%;
-    color: #bac5cf;
     justify-content: center;
     border-top: 1px solid;
     padding-bottom: 5%;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
+}
+
+footer p {
+    color: #bac5cf;
 }
 
 .footer-info p {
@@ -517,7 +524,6 @@ footer {
 
 .footer-newsletter {
     margin-right: 3%;
-    
 }
 
 
@@ -531,8 +537,10 @@ footer {
 @media(max-width:500px) {
 
     body {
-        overflow-x: hidden;
+        /*overflow-x: hidden;*/
         max-width: 100%;
+        display: block;
+        height: auto;
     }
 
     header {
@@ -578,12 +586,44 @@ footer {
     .indexmain {
         justify-content: flex-start;
         padding-top: 30%;
+        padding-bottom: 30%;
     }
     .mainlogo {
         width: 60%;
     }
 
     .pongcontainer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pongprice {
+        width: 35%;
+        transform: translateX(0px);
+    }
+
+    .pongbuy {
+        width: 65%;
+        transform: translate(95px, -60px);
+    }
+
+    .completecontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .complete {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    .aboutcontainer {
+        padding-bottom: 0%;
+        height: auto;
+    }
+
+    /*.pongcontainer {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
     }
@@ -613,6 +653,23 @@ footer {
     .pongprice {
         grid-column: 1;
         grid-row: 4;
+    }*/
+
+    footer {
+        flex-direction: column;
+    } 
+    .footer-info p {
+        margin-right: 20%;
     }
+    
+    .footer-newsletter {
+        margin-left: 25%;
+    
+    } 
+
+    .contact-container {
+        transform: translateX(-35px);
+    }
+
 
 }
