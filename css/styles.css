@@ -368,15 +368,16 @@ img {
 
 .pongcontainer {
     display: grid;
-    margin: 10%;
+    margin: 2%;
     /*width: 30%;*/
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
 }
 
 .pongcontainer img {
 grid-column: 1;
 grid-row: 1 / 6;
+margin: 2%;
 }
 
 .pongcontainer h1 {
@@ -394,24 +395,30 @@ grid-row: 1 / 6;
 }
 
 .pongbuy {
+    grid-column: 3;
+    grid-row: 5;
     display: flex;
     background-color: #bac5cf;
     height: 60px;
-    width: 70%;
+    width: 40%;
     justify-content: center;
     align-items: center;
-    transform: translateX(60px);
+    transform: translate(120%, -170%);
+
 }
 
 .pongprice {
+    grid-column: 2;
+    grid-row: 4;
     display: flex;
     font-size: xx-large;
     border: 3px solid #bac5cf;
     height: 60px;
-    width: 35%;
+    width: 20%;
     justify-content: right;
     align-items: center;
-    transform: translateX(241%);
+    transform: translate(640%, 275%);
+
 }
 
 footer {
