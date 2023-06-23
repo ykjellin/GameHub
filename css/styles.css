@@ -510,6 +510,16 @@ footer {
     align-items: flex-end;
 }
 
+.footer-info p {
+    margin-left: 20%;
+    font-weight: 200;
+}
+
+.footer-newsletter {
+    margin-right: 3%;
+    
+}
+
 
 
 /*media Queries*/
