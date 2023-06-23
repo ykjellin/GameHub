@@ -241,27 +241,30 @@ img {
     grid-area: paymentoptions;
     background-color: #bac5cf;
     color: #1C213E;
-    height: 15vh;
-    width: 70%;
+    height: 200px;
+    width: 50%;
     margin: 5%;
     margin-top: 10%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    transform: translateX(35%);
 
 }
 
 .mastercard {
     /*grid-area: ms;*/
-    transform: translateY(-12%);
+    /*transform: translateY(-12%);*/
     grid-column: 2;
     grid-row: 2;
+
 }
 
 .visa {
     /*grid-area: vs;*/
     grid-column: 4;
     grid-row: 2;
+    transform: translateY(20%);
 }
 
 .paytitle {
