@@ -9,11 +9,12 @@
 body {
     background-color: #1c213e;
     color: #bac5cf;
-    display: grid;
+    display: flex;
     font-family: 'Oswald', 'Verdana, sans-serif';
-    grid-template-rows: 1fr 8fr 1fr;
-    height: auto;
+    height: 100vh;
+    flex-direction: column;
 }
+
 
 
 
@@ -59,7 +60,7 @@ a {
 /* store page */
 
 main {
-    grid-row: 2 span 8;
+    flex: 1;
     color: #bac5cf;
 }
 h2 {
@@ -81,6 +82,7 @@ img {
 }
 
 .productcard {
+    position: relative;
     border-style: solid;
     border-width: 1px;
     border-color: #bac5cf;
@@ -102,7 +104,7 @@ img {
     position: absolute;
     border: 3px;
     border-style: solid;
-    transform: translate(50px, 15px);
+    transform: translate(78px, 15px);
 
 }
 .console {
@@ -116,15 +118,25 @@ img {
     font-size: larger;
     font-weight: 500;
     position: absolute;
-    transform: translate(106px, 15px);
+    transform: translate(134px, 15px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #bac5cf;
-    width: 88px;
+    width: 60px;
     height: 35px;
+    padding-left: 5px;
     text-align: justify;
 }
+
+.click-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 
 
 
@@ -135,17 +147,32 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.index-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
-    margin: auto;
-    height: 80%;
+    padding: 7vh 0vh 20vh 0vh;
 }
 
 .mainlogo {
     width: 30%;
+    align-self: center;
 }
 
 .cta {
     background-color: #bac5cf;
+    height: 20%;
+    width: auto;
+    border-radius: 2px;
+    padding: 10px 50px 10px;
+    align-self: center;
+}
+
+.cta:hover {
+    background-color: #a5adb5;
 }
 
 
@@ -162,6 +189,16 @@ img {
     width: 100%;
     height: 100%;
     padding-bottom: 10%;
+}
+
+.text-container-about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 
 .aboutcontainer h1 p {
@@ -191,11 +228,21 @@ img {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.contact {
+    width: 50vh;
+}
+
+.contact label {
+    transform: translateY(15px);
+    font-size: large;
 }
 
 .contact textarea {
-    width: 150%;
-    height: 100%;
+    width: 100%;
+    height: 20vh;
 }
 
 .contact input, label{
@@ -204,6 +251,13 @@ img {
 
 .contact input, textarea,.send {
     background-color: #bac5cf;
+    margin: 4% 0 4% 0;
+    border-radius: 2px;
+
+}
+
+#first-name, #last-name {
+    width: 100%;
 }
 
 .send {
@@ -212,18 +266,22 @@ img {
     margin: 20px 0;
     text-align: center;
     font-family: 'Oswald', 'Verdana', 'Sans-serif';
+    font-size: x-large;
+    font-weight: 500;
     color: #1C213E;
-    font-size: larger;
+    
 }
 
 .send:hover {
     background-color: #a5adb5;
 }
 
-.contact input::placeholder {
+.contact textarea, input::placeholder {
+    font-family: 'Oswald', 'Verdana', 'Sans-serif';
     color: black;
-    font-weight: bold;
+    font-weight: 500;
 }
+
 
 
 
@@ -253,25 +311,44 @@ img {
     background-color: #bac5cf;
     display: grid;
     margin: 10%;
-    height: 80%;
-    max-width: 100%;
+    padding: 8px;
+    height: 100%;
+    max-width: auto;
     min-width: 80%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+    overflow-y: scroll;
+    border-radius: 2px;
+
 
 }
 
-.cartprice,.product,.carth2,
-.carth3,.total,.totalprice,.paytitle,
-.checkbox1,.checkbox2,.form,.pay {
+.cartprice,
+.product,
+.carth2,
+.carth3,
+.total,
+.totalprice,
+.paytitle,
+.checkbox1,
+.checkbox2,
+.form,
+.pay {
     display: flex;
 }
 
-.cartprice,.product,.carth3,.pay {
+.cartprice,
+.product,
+.carth3,
+.pay {
     align-items: center;
 }
 
-.carth2,.paytitle,.checkbox1,.checkbox2,.pay {
+.carth2,
+.paytitle,
+.checkbox1,
+.checkbox2,
+.pay {
     justify-content: center;
 }
 
@@ -298,7 +375,8 @@ img {
     grid-row: 2;
 }
 
-.total,.totalprice {
+.total,
+.totalprice {
     font-size: x-large;
 }
 
@@ -333,6 +411,7 @@ img {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     transform: translateX(35%);
+    border-radius: 1px;
 
 }
 
@@ -365,37 +444,49 @@ img {
     grid-row: 3;
 }
 
+#checkbox {
+
+}
+
 
 .form {
     margin-top: 10%;
-    flex-wrap: wrap;
-    width: 33%;
+    width: 60vh;
     flex-flow: column;
-
+    align-self: center;
 }
+
 
 .form input {
     background-color: #bac5cf;
     font-weight: bold;
+    border-radius: 2px;
+    width: 60vh;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+.form label {
+    margin-left: 1vh;
+    transform: translateY(1vh);
 }
 
 .addcard h2 {
     color: #bac5cf;
     margin-top: 20px;
+    font-size: x-large;
+    margin-left: 1vh;
 }
 
-.bginput {
-    width: 200%;
-}
 
 .sminput {
-    width: 90%;
-}
+    width: 100%;
+}*/
 
 .pay {
     background-color: #bac5cf;
     margin: 10%;
-    transform: translateX(55%);
+    border-radius: 2px;
 }
 
 
@@ -418,6 +509,7 @@ img {
 }
 
 .complete {
+    display: flex;
     grid-area: paymentoptions;
     background-color: #bac5cf;
     color: #1C213E;
@@ -425,9 +517,10 @@ img {
     width: 50%;
     margin: 5%;
     margin-top: 10%;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     transform: translateX(35%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .completetitle {
@@ -437,6 +530,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.checkmark {
+    height: auto;
+    width: 46px;
+    padding-top: 10px;
 }
 
 
@@ -454,12 +553,11 @@ img {
 
 .pongcontainer img {
     grid-column: 1;
-    grid-row: 1 / 6;
-    margin: 2%;
+    grid-row: 4 / 1;
 }
 
 .pongcontainer h1 {
-    color: #ffffff;
+    color: #bac5cf;
     grid-column: 2 / 4;
     grid-row: 1;
     padding-left: 5%;
@@ -467,27 +565,34 @@ img {
 }
 
 .pongtext {
-    color: #ffffff;
+    color: #bac5cf;
     grid-column: 2 / 4;
     grid-row: 2;
-    margin: 5%;
+    padding: 5%;
     font-weight: 300;
+    font-size: large;
+    width: 50%;
+}
+
+.pongtext p {
+    padding: 5px 0px 5px 0px;
 }
 
 .pongbuy {
+    position: absolute;
     grid-column: 3;
     grid-row: 5;
     display: flex;
     background-color: #bac5cf;
     height: 60px;
     width: 40%;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    transform: translate(120%, -170%);
-
 }
 
 .pongprice {
+    position: absolute;
     color: #bac5cf;
     grid-column: 2;
     grid-row: 4;
@@ -496,11 +601,29 @@ img {
     border: 3px solid #bac5cf;
     height: 60px;
     width: 20%;
+    flex-shrink: 0;
     justify-content: flex-end;
     align-items: center;
-    transform: translate(640%, 275%);
-
+    transform: translateX(-245px);
 }
+
+.prod-buy {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    white-space: nowrap;
+    
+    padding-right: 10%;
+    
+}
+
+
+
+/* footer */
 
 footer {
     color: #bac5cf;
@@ -510,7 +633,6 @@ footer {
     justify-content: center;
     border-top: 1px solid;
     padding-bottom: 5%;
-    /*align-items: flex-end;*/
 }
 
 footer p {
@@ -570,13 +692,24 @@ footer p {
     }
 
     .form {
-        transform: translate(0px);
-        margin-left: 18%;
+        margin: 0;
+        width: 90%;
+    }
+
+    .form input {
+        width: 40vh;
+
+    }
+
+    .form div {
+        align-self: center;
     }
 
     .pay {
         padding-left: 20%;
         padding-right: 20%;
+        width: 60%;
+        align-self: center;
     }
 
     .indexmain {
@@ -585,24 +718,32 @@ footer p {
         padding-bottom: 30%;
     }
     .mainlogo {
-        width: 60%;
+        width: 80%;
     }
 
     .pongcontainer {
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+
+    .prod-buy {
+        transform: translateY(60px);
+        
+    }
+
+    .pongtext {
+        text-align: center;
+        width: auto;
     }
 
     .pongprice {
-        width: 35%;
-        transform: translateX(-5px);
+        width: 30%;
+        transform: translateX(-165px);
     }
 
-    .pongbuy {
-        width: 65%;
-        transform: translate(100px, -60px);
-    }
 
     .completecontainer {
         display: flex;
@@ -621,24 +762,28 @@ footer p {
 
     footer {
         flex-direction: column;
-    } 
-    .footer-info p {
-        margin-right: 20%;
-        align-self: center;
+        align-items: center;
         text-align: center;
-    }
+    } 
     
     .footer-newsletter {
-        margin-left: 25%;
-    
+        margin-left: 5vh;
     } 
 
     .footer-gamehub {
-        align-self: center;
+        margin-left: 3vh;
     }
 
-    .contact-container {
-        transform: translateX(-35px);
+    .text-container-about {
+        width: 100%;
+    }
+    
+    .aboutcontainer p {
+        width: 90%;
+    }
+
+    .contact {
+        width: 40vh;
     }
 
 
