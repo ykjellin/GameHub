@@ -23,7 +23,6 @@ body {
 
 header {
     background-color: #bac5cf;
-    grid-row: 1;
     height: 100px;
     display: flex;
 }
