@@ -27,6 +27,10 @@ header {
     display: flex;
 }
 
+.logo-a {
+   max-width: 160px;
+}
+
 nav {
     width: 100%;
 }
@@ -732,8 +736,12 @@ footer p {
         height: auto;
     }
 
+    #nav-home, #nav-store {
+        display: none;
+    }
+
     header {
-        height: 300px;
+        height: 200px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -741,10 +749,10 @@ footer p {
     .logo {
         width: 100px;
         justify-content: flex-start;
-        transform: translateY(-65px);
+        transform: translateY(-15px);
     }
     ul {
-        flex-direction: column;
+        /*flex-direction: column;*/
         line-height: 20px;
     }
 
@@ -857,6 +865,8 @@ footer p {
     .contact {
         width: 40vh;
     }
+
+
 
 
 }
