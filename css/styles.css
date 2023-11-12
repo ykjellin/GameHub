@@ -126,8 +126,9 @@ img {
     transform: translateY(5px);
 }
 .cartstore {
+    font-family: 'Oswald', 'Verdana, sans-serif';
     color: #1C213E;
-    font-size: larger;
+    font-size: 22px;
     font-weight: 500;
     position: absolute;
     transform: translate(134px, 15px);
@@ -139,6 +140,11 @@ img {
     height: 35px;
     padding-left: 5px;
     text-align: justify;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .click-area {
