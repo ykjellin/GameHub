@@ -8,20 +8,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Checks if the current page is pingpong.html
     if (Array.isArray(apiData) && window.location.pathname.includes("pingpong.html")) {
-        showProductDetailsFromUrl();
+        urlDetails();
     } else {
         console.error("Invalid or missing data. Check if fetchData is working properly.");
     }
 });
 
 // API endpoint
-const apiEndpoint = "https://api.noroff.dev/api/v1/gamehub";
+const apiProductData = "https://api.noroff.dev/api/v1/gamehub";
 
 // Fetch data from the API
 async function fetchData() {
     try {
 
-        const response = await fetch(apiEndpoint);
+        const response = await fetch(apiProductData);
 
         if (!response.ok) {
             // Throw an error if the HTTP response is not successful
@@ -39,31 +39,31 @@ async function fetchData() {
 }
 
 // Create a product card
-function createProductCard(product) {
+function storeProductCards(product) {
     // Create a container for the product card
     const cardContainer = document.createElement("div");
     cardContainer.className = "productcard";
 
     // Create elements for image, title, console, price, and buttons
-    const imageElement = document.createElement("img");
-    imageElement.src = product.image;
-    imageElement.className = "product-image";
+    const apiImageData = document.createElement("img");
+    apiImageData.src = product.image;
+    apiImageData.className = "product-image";
 
-    const titleElement = document.createElement("h2");
-    titleElement.className = "cardtitle";
-    titleElement.textContent = product.title;
+    const apiTitleData = document.createElement("h2");
+    apiTitleData.className = "cardtitle";
+    apiTitleData.textContent = product.title;
 
-    const consoleElement = document.createElement("p");
-    consoleElement.className = "console";
-    consoleElement.textContent = "-PS4/PS5, Xbox X/S, PC, Nintendo Switch.";
+    const platformData = document.createElement("p");
+    platformData.className = "console";
+    platformData.textContent = "-PS4/PS5, Xbox X/S, PC, Nintendo Switch.";
 
-    const priceElement = document.createElement("p");
-    priceElement.id = "price";
-    priceElement.className = "price";
-    priceElement.textContent = `$${product.price.toFixed(2)}`;
+    const apiPriceData = document.createElement("p");
+    apiPriceData.id = "price";
+    apiPriceData.className = "price";
+    apiPriceData.textContent = `$${product.price.toFixed(2)}`;
 
-    const buttonsContainer = document.createElement("div");
-    buttonsContainer.id = "buttonsContainer";
+    const cardButtonContainer = document.createElement("div");
+    cardButtonContainer.id = "cardButtonContainer";
 
     const button = document.createElement("button");
     button.className = "cartstore";
@@ -74,14 +74,14 @@ function createProductCard(product) {
     });
 
     // Appending the button to the buttons container
-    buttonsContainer.appendChild(button);
+    cardButtonContainer.appendChild(button);
 
     // Appending elements to the card container
-    cardContainer.appendChild(imageElement);
-    cardContainer.appendChild(titleElement);
-    cardContainer.appendChild(consoleElement);
-    cardContainer.appendChild(priceElement);
-    cardContainer.appendChild(buttonsContainer);
+    cardContainer.appendChild(apiImageData);
+    cardContainer.appendChild(apiTitleData);
+    cardContainer.appendChild(platformData);
+    cardContainer.appendChild(apiPriceData);
+    cardContainer.appendChild(cardButtonContainer);
 
     // Return the generated product card container
     return cardContainer;
@@ -105,19 +105,19 @@ async function updateProductCards() {
 
     // create card for each product in the data
     data.forEach((product) => {
-        const cardContainer = createProductCard(product);
+        const cardContainer = storeProductCards(product);
         productContainer.appendChild(cardContainer);
     });
 }
 
 // Show product details based on ID in the URL
-function showProductDetailsFromUrl() {
+function urlDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id");
 
     if (productId) {
         // Show product details for the specified ID
-        showProductDetails(productId);
+        productDetails(productId);
     } else {
          // Error message when the product ID in the URL is invalid or missing
         console.error("Invalid or missing product ID in the URL.");
@@ -125,14 +125,14 @@ function showProductDetailsFromUrl() {
 }
 
 // Shows product data on a dedicated product details page
-function showProductDetails(productId) {
+function productDetails(productId) {
     if (Array.isArray(apiData)) {
         // Find the product in the fetched data based on the provided ID
         const productData = apiData.find((data) => data.id === productId);
 
         if (productData) {
             // Update the product details page with the found product data
-            updateProductPage(productData);
+            productPage(productData);
         } else {
             // Error message when the product data is not found for the given ID
             console.error("Product data not found for object ID:", productId);
@@ -144,27 +144,27 @@ function showProductDetails(productId) {
 }
 
 // Update the product details page content (pingpong.html)
-function updateProductPage(productData) {
+function productPage(productData) {
     // Select elements on the product details page for updating
-    const titleElement = document.querySelector(".pongtitle");
+    const apiTitleData = document.querySelector(".pongtitle");
     const descriptionElement = document.querySelector(".pongdescription");
-    const priceElement = document.querySelector(".pongprice");
-    const imageElement = document.querySelector(".pongcontainer img");
+    const apiPriceData = document.querySelector(".pongprice");
+    const apiImageData = document.querySelector(".pongcontainer img");
 
     // Update the content of the selected elements with the product data
-    if (titleElement) {
-        titleElement.textContent = productData.title;
+    if (apiTitleData) {
+        apiTitleData.textContent = productData.title;
     }
 
     if (descriptionElement) {
         descriptionElement.textContent = productData.description;
     }
 
-    if (priceElement) {
-        priceElement.textContent = `$${productData.price.toFixed(2)}`;
+    if (apiPriceData) {
+        apiPriceData.textContent = `$${productData.price.toFixed(2)}`;
     }
 
-    if (imageElement) {
-        imageElement.src = productData.image;
+    if (apiImageData) {
+        apiImageData.src = productData.image;
     }
 }
