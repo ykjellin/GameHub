@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Gamehub gamestore">
+    <script src="data/products.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +25,96 @@
         </nav>
     </header>
     <main>
-        <section class="containercards">
-        <div class="productcard">
+        <section id="containercards" class="containercards">
+            <!--<div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+            </div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="2" onclick="showProductDetails(2)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+           <!-- </div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="3" onclick="showProductDetails(3)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+            <!--</div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="4" onclick="showProductDetails(4)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+           <!-- </div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="5" onclick="showProductDetails(5)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+            <!--</div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="6" onclick="showProductDetails(6)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+           <!-- </div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="7" onclick="showProductDetails(7)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+           <!-- </div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="8" onclick="showProductDetails(8)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+            <!--</div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="9" onclick="showProductDetails(9)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+            <!--</div>
+            <div class="productcard">
+                <img src="" class="product-image">
+                <h2 class="cardtitle">  </h2>
+                <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
+                <p id="price" class="price" ></p>
+                <div id="buttonsContainer"></div>
+                <!--<button class="cartstore" data-object-id="10" onclick="showProductDetails(10)">ENTER</button>
+                <a href="products/pingpong.html?id=1"class="click-area" >.</a>-->
+            <!--</div>
+ <!--       <div class="productcard">
             <img src="images/PingPong.jpg" class="product-image" >
             <h2 class="cardtitle" >Ping Pong: Championship</h2>
             <p class="console" >-PS4/PS5, Xbox X/S, PC, Nintendo Switch.</p>
@@ -120,7 +209,7 @@
             <p class="price" >$22.00</p>
             <a href="products/pingpong.html"class="cartstore" >ENTER</a>
             <a href="products/pingpong.html"class="click-area" >.</a>
-        </div>
+        </div>-->
     </section>
     </main>
     <footer>
