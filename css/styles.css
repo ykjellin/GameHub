@@ -572,6 +572,11 @@ img {
 
 /*Product Page*/
 
+#loadingIndicator {
+    text-align: center;
+    padding: 50px;
+}
+
 .pongcontainer {
     display: grid;
     margin: 2%;
@@ -649,6 +654,8 @@ img {
 .pongbuy:hover {
     background-color: #a5adb5;
 }
+
+
 
 
 
