@@ -23,13 +23,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 // API endpoint
-const apiProductData = "https://www.kjellinfrontend.com/wp-json/wc/v3/products";
+const apiProductData = "https://www.kjellinfrontend.com/wp-json/wc/store/products";
 
 // Fetch data from the API
 async function fetchData() {
     try {
         document.getElementById('loading').style.display = 'block';
 
+        // Messed up and originally used a v3 endpoint for my API. I am just leaving this here as a precauton because i am paranoid.
         const response = await fetch(apiProductData, {
             headers: new Headers({
                 'Authorization': 'Basic ' + btoa("ck_8afc9a1020ae5a19f8c4ee465eee98b7a036e461:cs_fbb26ba659a7a3a21b9e7eecd5461c8cbbf4f31f")
