@@ -62,7 +62,7 @@ function storeProductCards(product) {
 
     // Create elements for cards
     const apiImageData = document.createElement("img");
-    apiImageData.src = product.images.length > 0 ? product.images[0].src : 'default-image-url'; // Use the first image or a default image
+    apiImageData.src = product.images.length > 0 ? product.images[0].src : 'default-image-url'; 
     apiImageData.className = "product-image";
 
     const apiTitleData = document.createElement("h2");
@@ -72,7 +72,9 @@ function storeProductCards(product) {
     const apiPriceData = document.createElement("p");
     apiPriceData.id = "price";
     apiPriceData.className = "price";
-    apiPriceData.textContent = `$${parseFloat(product.price).toFixed(2)}`;
+    const cents = product.prices.price; 
+    const dollars = (cents / 100).toFixed(2);
+    apiPriceData.textContent = `$${dollars}`;
 
     const cardButtonContainer = document.createElement("div");
     cardButtonContainer.id = "cardButtonContainer";
@@ -160,7 +162,7 @@ function productDetails(productId) {
 }
 
 // Update the product details page content (pingpong.html)
-function productPage(productData) {
+function productPage(product) {
     // Select elements on the product details page for updating
     const apiTitleData = document.querySelector(".pongtitle");
     const descriptionElement = document.querySelector(".pongdescription");
@@ -168,33 +170,33 @@ function productPage(productData) {
     const apiImageData = document.querySelector(".pongcontainer img");
     const productDetailsSection = document.getElementById('productdetails');
 
-
     if (productDetailsSection) {
         productDetailsSection.style.display = 'none';
     }
 
-
     if (apiTitleData) {
-        apiTitleData.textContent = productData.name;
+        apiTitleData.textContent = product.name;
     }
 
     if (descriptionElement) {
-        descriptionElement.innerHTML = productData.description;
+        descriptionElement.innerHTML = product.description;
     }
 
-    if (apiPriceData) {
-        apiPriceData.textContent = `$${parseFloat(productData.price).toFixed(2)}`;
+    if (apiPriceData && product.prices) {
+        const cents = product.prices.price; 
+        const dollars = (cents / 100).toFixed(2);
+        apiPriceData.textContent = `$${dollars}`;
     }
 
-    if (apiImageData && productData.images.length > 0) {
-        apiImageData.src = productData.images[0].src;
+    if (apiImageData && product.images && product.images.length > 0) {
+        apiImageData.src = product.images[0].src;
     }
-
 
     if (productDetailsSection) {
         productDetailsSection.style.display = 'block'; 
     }
 }
+
 
 
 
